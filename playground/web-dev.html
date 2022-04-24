@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- hello world -->
+    </div>
+    
+    <script>
+        // $('#app'); 와 같음
+        var div = document.querySelector('#app');
+        var str = 'hello world!!!';
+        // console.log(div);
+        div.innerHTML = str;
+        
+        str = 'hello'; // 문자열이 바꾸게 된다면 다시 값을 넣어주어야 함
+        div.innerHTML = str;
+    </script>
+</body>
+</html>
