@@ -7,15 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <!-- ... vue를 붙인 기능이 적용됨 -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-        var vm = new Vue({
+        var vm = new Vue({ 
             // 객체가 들어감
-            el: '#app', //특정 태그에 vue 를 붙이는 것. element 지정
+            el: '#app', //특정 태그에 vue 를 붙이는 것. element 지정 _ 지정하지 않으면 vue 기능 적용 X
             data : {
                 message: 'hi'
+            },
+            methods : {
+
             }
         });  
     </script>
