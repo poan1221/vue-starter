@@ -9,22 +9,39 @@
 <body>
     <div id="app">
         <app-header></app-header>
-        <app-content></app-content>
+        <app-footer></app-footer>
+    </div>
+    <div id="app2">
+        <app-header></app-header>
+        <app-footer></app-footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
+        //전역 컴포넌트 등록 -> 인스턴트에 기본적으로 다 등록됨
         //Vue.component('컴포넌트 이름', 컴포넌트 내용);
-        //전역 컴포넌트 등록 > 
         Vue.component('app-header', {
             template: '<h1>Header</h1>'
         });
-        Vue.component('app-content', {
-            template: '<div>content</div>'
-        });
 
         new Vue({
-            el: '#app'
+            el: '#app',
+            // 지역 컴포넌트 등록 방식 -> 인스턴스마다 생성해야 함
+            components: {         
+                //'컴포넌트': 컴포넌트 내용
+                'app-footer': {
+                    template: '<footer>푸터 Footer</footer>'
+                }
+            }
+        });
+
+        new Vue ({
+            el: '#app2',
+            components: {
+                'app-footer': {
+                    template: '<footer>Footer2</footer>'
+                }
+            }
         });
 
     </script>
